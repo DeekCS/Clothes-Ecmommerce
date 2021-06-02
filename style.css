@@ -1,0 +1,382 @@
+
+/* REGULAR RULES */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+ font-family: 'Poppins',
+ sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+}
+
+h2 {
+    font-size: 1.8rem !important;
+    font-weight: 600 !important;
+}
+
+h3 {
+    font-size: 1.4rem !important;
+    font-weight: 800 !important;
+}
+
+h4 {
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+}
+
+h5 {
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    color: #1d1d1d;
+}
+
+h6 {
+    color: #d8d8d8;
+}
+
+button {
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    outline: none;
+    border: none;
+    background-color: #1d1d1d;
+    color: aliceblue;
+    padding: 13px 38px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover{
+    background-color: #3a3833;
+}
+
+
+hr {
+  width: 30px;   
+  height: 3px !important;
+  background-color: #fb774b !important; 
+}
+
+.star {
+      padding: 10px 0;
+}
+
+.star i{
+    font-size: 0.8rem;
+    color: goldenrod;
+}
+/* REGULAR RULES end */
+
+/* Navigation Start */
+.navbar {
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    /* z-index: 20; */
+}
+.navbar-light .navbar-nav .nav-link {
+    padding: 0 20px;
+    color: black;
+    transition: 0.3s  ease;
+}
+
+/* navbar effect  */
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar i:hover,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar i.active
+ {
+    color: coral;
+}
+
+.navbar i{
+    font-size: 1.2rem;
+    padding: 0 7px ;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+#bar {
+    font-size: 1.5rem;
+    padding: 7px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s ease ;
+    color: black;
+}
+
+#bar:hover,
+#bar.active{
+    color: white;
+}
+/* Mobile Nav */
+.navbar-light .navbar-toggler{
+    border: none;
+    outline: none;
+}
+
+
+@media only screen and (max-width:991px) {
+    body>nav>div>button:hover,
+    body>nav>div>button:focus{
+        background-color: #fb774b;
+    }
+    
+      body>nav>div>button:hover #bar,
+      body>nav>div>button:focus #bar{
+         color:white;
+      }
+
+    #navbarSupportedContent>ul {
+        margin: 1rem;
+        justify-content: flex-end;
+        align-items: flex-end;
+         text-align: right;
+    }
+    /* to target every elements to space btw the elm  */
+    #navbarSupportedContent>ul>li:nth-child(n)>a {
+        padding: 10px 0;
+    }
+}
+
+/* Navigation End */
+
+/* Home section start */
+#home{
+    background-image: url("img/back.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    /* to set the background center of the page */
+    background-position:top 60px center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#home span {
+    color: coral;
+}
+
+
+
+/* Home section end */
+
+
+/* New product Section start */
+.NewProduct .one img{
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+}
+
+
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+      
+}
+
+.con:hover .image {
+     cursor: pointer;
+    opacity: 0.3;
+ 
+}
+
+.con:hover .middle {
+    opacity: 1;
+}
+
+.middle button {
+     display: inline-block;
+     font-size: 14px;
+     font-weight: 500;
+     color: #2a2a2a;
+     background: none;
+     text-transform: uppercase;
+     border-bottom: 1px solid #2a2a2a;
+     padding: 2.5px;
+     transform: translateY(70px);
+     transition: 0.3s ease;
+}
+
+.middle button:hover {
+      color: white;
+      border-bottom:1px solid #fff;
+}
+
+#NewProduct>div>div:nth-child(1)>div {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+}
+
+#NewProduct>div>div:nth-child(3)>div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end;
+}
+
+
+/* New product Section End */
+
+
+/* Products Start  */
+
+.product {
+    cursor: pointer;
+    margin-bottom: 2rem;
+
+}
+
+.product img{
+    transition:  0.3s all;
+}
+
+.product:hover img{
+    opacity: 0.7;
+}
+
+.product .buy-btn{
+    background: #fb774b;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 0.3s all;
+}
+
+.product:hover .buy-btn {
+    /* background: #fb774b; */
+    transform: translateY(20px);
+    opacity: 1;
+    /* transition: 0.3s all; */
+}
+
+
+/* Products End */
+
+
+/* Banner Start */
+#banner {
+      background-image: url("img/banner/2.jpg");
+      width: 100%;
+      height: 60vh;
+      background-size: cover;
+      /* to set the background center of the page */
+      background-position:top 70px  center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+}  
+
+#banner h4{
+    color: #d8d8d8;
+
+}
+
+#banner h1 {
+    color:#fff;
+
+}
+
+#banner button {
+    background-color: #fb774b;
+
+}
+/* Banner End */
+
+
+/* Footer Style Start */
+
+footer {
+    background-color: #222;
+
+}
+
+footer h5{
+    color:#d8d8d8;
+    font-weight: 700;
+    font-size: 1.2rem;
+
+}
+
+footer li{
+    padding-bottom: 4px;
+}
+
+footer li a {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+footer li a:hover {
+    color: #d8d8d8;
+}
+
+footer p {
+    color: #999;
+    font-size: 0.8rem;
+}
+
+footer .copyright a {
+    color: #000;
+    width: 38px;
+    height: 38px;
+    background-color: #fff;
+    display: inline-block;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    margin:  0 5px;
+}
+footer .copyright a:hover {
+    color:#fff;
+    background-color: #fb774b;
+}
+
+
+/* Footer Style End */
+
